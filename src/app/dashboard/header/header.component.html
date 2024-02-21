@@ -1,0 +1,52 @@
+<a href="#logo" class="logo">Portfolio</a>
+<div class="float-end">
+  <nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Skill</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </nav>
+</div>
+<section class="Home">
+  <div class="home-content">
+    <div class="row w-100">
+      <div class="col-8 desc">
+        <h3>Hello , Its me</h3>
+        <h1>Suriya</h1>
+
+        <ngx-typed-js
+          [strings]="['Web Developer.', 'Angular Developer.', 'Photographer.']"
+          [shuffle]="true"
+          [typeSpeed]="100"
+          [backSpeed]="200"
+          [backDelay]="500"
+          [loop]="true"
+        >
+          <h3>And I'm a <span class="typing"></span></h3>
+        </ngx-typed-js>
+
+        <p>
+          I'm a web Developer with extensive experience for over 2 years.
+          <br />expertise is to create and develop responsive web applications
+          using Angular, Bootstrap,CSS, Angular Material.
+        </p>
+        <div class="homeicons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div>
+          <button class="btn">More About Me</button>
+        </div>
+      </div>
+      <div class="col-4 imgcss">
+        <img
+          class="userimg"
+          src="../../../assets/userimg.jpg"
+          alt="userphoto"
+        />
+      </div>
+    </div>
+  </div>
+</section>

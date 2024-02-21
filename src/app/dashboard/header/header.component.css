@@ -1,0 +1,63 @@
+.desc h1 {
+  font-weight: 700;
+}
+.userimg {
+  background: url("../../../assets/userimg.jpg") no-repeat;
+  background-position: center;
+  /* width: 90%;
+  height: 60%;
+  border-radius: 50%; */
+  width: 300px;
+  height: 300px;
+  border-radius: 1000px;
+}
+.homeicons a {
+  margin: 10px;
+  font-size: 23px;
+  color: aqua;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid aqua;
+  border-radius: 50%;
+  background: transparent;
+  text-decoration: none;
+}
+.homeicons a :hover {
+  color: white;
+  font-size: 23px;
+  border: 2px solid white;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.imgcss {
+  background: -webkit-linear-gradient(
+    left top,
+    rgb(220, 207, 20) 0%,
+    #f90 100%
+  );
+  width: 300px;
+  height: 300px;
+  border-radius: 1000px;
+  padding: 10px;
+}
+.btn {
+  border: 2px solid aqua;
+  color: aqua;
+  width: 30%;
+  margin: 20px 0px 0px 0px;
+  border-radius: 5%;
+}
+
+.btn:hover {
+  border: 2px solid white;
+  color: white;
+}
+.typing {
+  color: aqua;
+  font-weight: 700;
+}
