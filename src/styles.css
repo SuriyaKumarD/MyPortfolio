@@ -10,15 +10,14 @@
 body {
   color: bisque;
   background-size: cover;
-  background: url("../src/assets/backgnd.jpg") no-repeat;
+  background: url("../src/assets/backgnd.jpg") repeat;
 }
 .header {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
   background: inherit;
-  padding: 20px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,6 +29,10 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  border: 1px solid aqua;
+  margin: 5px;
+  padding: 2px 7px;
+  border-radius: 10%;
 }
 .navbar {
   display: inline-block;
@@ -42,12 +45,14 @@ body {
   background: inherit;
 }
 .navbar a {
+  padding: 3px 1px;
   color: #ffff;
   margin: 0px 2%;
   text-decoration: none;
 }
 .navbar a:hover {
   color: aqua;
+  border-bottom: 3px solid aqua;
 }
 .float-end {
   float: right;
@@ -69,3 +74,18 @@ body {
 .home-content {
   max-width: 100%;
 }
+.pt-0 {
+  padding-top: 0px;
+}
+.mr-6p {
+  margin-right: 6%;
+}
+/* margin collectio starts */
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+/* margin collectio ends */

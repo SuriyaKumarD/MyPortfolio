@@ -1,0 +1,13 @@
+.card {
+  background: inherit;
+  border: 1px solid antiquewhite;
+}
+.card,
+.card-header {
+  color: #ffe4c4;
+  text-align: center;
+}
+.card-header {
+  font-size: 29px;
+  font-weight: 600;
+}

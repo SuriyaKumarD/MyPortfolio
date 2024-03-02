@@ -1,12 +1,14 @@
-<a href="#logo" class="logo">Portfolio</a>
-<div class="float-end">
-  <nav class="navbar">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Skill</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Contact</a>
-  </nav>
+<div class="navmenuheader">
+  <a href="#logo" class="logo">Portfolio</a>
+  <div class="float-end mr-6p">
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#aboutSection">About</a>
+      <a href="#skillSection">Skill</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
 </div>
 <section class="Home">
   <div class="home-content">
@@ -41,11 +43,17 @@
       </div>
       <div class="col-4 imgcss">
         <img
-          class="userimg"
+          class="userimg img-fluid"
           src="../../../assets/userimg.jpg"
           alt="userphoto"
         />
       </div>
     </div>
   </div>
+</section>
+<section class="Home" id="aboutSection">
+  <app-about-component></app-about-component>
+</section>
+<section class="Home" id="skillSection">
+  <app-skill></app-skill>
 </section>
