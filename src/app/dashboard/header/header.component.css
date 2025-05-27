@@ -66,11 +66,12 @@
   background-color: black;
   opacity: 0.8;
   min-height: 50px;
-  padding: 5px;
+  padding: 5px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
 .menu-icon {
@@ -83,6 +84,11 @@
 
 .menu-icon:hover {
   color: aqua;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 991px) {
@@ -119,6 +125,7 @@
     flex-direction: column;
     align-items: center;
     margin: 0;
+    width: 100%;
   }
 
   .navbar a {
