@@ -67,6 +67,22 @@
   opacity: 0.8;
   min-height: 50px;
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-icon:hover {
+  color: aqua;
 }
 
 @media (max-width: 991px) {
@@ -80,6 +96,37 @@
 }
 
 @media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.5s ease;
+  }
+
+  .nav-container.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 15px 0;
+    font-size: 20px;
+  }
+
   .home-content .row {
     flex-direction: column-reverse;
   }
