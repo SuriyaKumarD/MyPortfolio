@@ -96,3 +96,25 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .card .row {
+    flex-direction: column;
+  }
+  .card .col-6 {
+    width: 100%;
+  }
+  .professional-skills {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-header {
+    font-size: 24px;
+  }
+  .pie {
+    --w: 70px;
+    font-size: 20px;
+  }
+}

@@ -1,12 +1,15 @@
 <div class="navmenuheader">
   <a href="#logo" class="logo animate__animated animate__fadeIn">Portfolio</a>
-  <div class="float-end mr-6p">
+  <div class="menu-icon" (click)="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </div>
+  <div class="nav-container" [class.active]="isMenuOpen">
     <nav class="navbar">
-      <a href="#" class="nav-link">Home</a>
-      <a href="#aboutSection" class="nav-link">About</a>
-      <a href="#skillSection" class="nav-link">Skill</a>
-      <a href="#" class="nav-link">Projects</a>
-      <a href="#contactme" class="nav-link">Contact</a>
+      <a href="#" (click)="closeMenu()">Home</a>
+      <a href="#aboutSection" (click)="closeMenu()">About</a>
+      <a href="#skillSection" (click)="closeMenu()">Skill</a>
+      <a href="#" (click)="closeMenu()">Projects</a>
+      <a href="#" (click)="closeMenu()">Contact</a>
     </nav>
   </div>
 </div>

@@ -58,76 +58,20 @@
   font-weight: 600;
 }
 
-.company-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 1rem;
-}
-
-.company-logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.role {
-  color: #00fff2;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.description {
-  color: #ccc;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
-.badge {
-  background: rgba(0, 255, 255, 0.1);
-  color: #00fff2;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  transition: all 0.3s ease;
-}
-
-.badge:hover {
-  background: rgba(0, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .timeline {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+@media (max-width: 768px) {
+  .card-body {
+    padding: 15px;
   }
+}
 
-  .timeline::before {
-    top: 0;
-    bottom: 0;
-    left: 20px;
-    width: 2px;
-    height: 100%;
+@media (max-width: 576px) {
+  .card-header {
+    font-size: 24px;
   }
-
-  .timeline-card {
-    margin-left: 45px;
+  .card-title {
+    font-size: 18px;
   }
-
-  .year {
-    left: -45px;
-    top: 50%;
-    transform: translateY(-50%);
+  .card-text {
+    font-size: 14px;
   }
 }
