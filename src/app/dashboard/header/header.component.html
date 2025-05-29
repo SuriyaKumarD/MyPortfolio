@@ -1,21 +1,21 @@
 <div class="navmenuheader">
-  <a href="#logo" class="logo">Portfolio</a>
+  <a href="#logo" class="logo animate__animated animate__fadeIn">Portfolio</a>
   <div class="float-end mr-6p">
     <nav class="navbar">
-      <a href="#">Home</a>
-      <a href="#aboutSection">About</a>
-      <a href="#skillSection">Skill</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
+      <a href="#" class="nav-link">Home</a>
+      <a href="#aboutSection" class="nav-link">About</a>
+      <a href="#skillSection" class="nav-link">Skill</a>
+      <a href="#" class="nav-link">Projects</a>
+      <a href="#contactme" class="nav-link">Contact</a>
     </nav>
   </div>
 </div>
 <section class="Home">
   <div class="home-content">
     <div class="row w-100">
-      <div class="col-8 desc">
-        <h3>Hello , Its me</h3>
-        <h1>Suriya</h1>
+      <div class="col-8 desc animate__animated animate__fadeInLeft">
+        <h3 class="greeting">Hello, It's me</h3>
+        <h1 class="name">Suriya</h1>
 
         <ngx-typed-js
           [strings]="['Web Developer.', 'Angular Developer.', 'Photographer.']"
@@ -24,25 +24,31 @@
           [backDelay]="500"
           [loop]="true"
         >
-          <h3>And I'm a <span class="typing"></span></h3>
+          <h3 class="role">And I'm a <span class="typing"></span></h3>
         </ngx-typed-js>
 
-        <p>
+        <p class="bio">
           I'm a Senior Software Developer with extensive experience for over 3
-          years.
-          <br />expertise is to create and develop responsive web applications
-          using Angular, Bootstrap,CSS, Angular Material.
+          years, specialized in creating and developing responsive web
+          applications using Angular, Bootstrap, CSS, Angular Material, ReactJS,
+          TailwindCSS.
         </p>
-        <div class="homeicons">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa fa-brands fa-whatsapp"></i></a>
+        <div class="homeicons animate__animated animate__fadeInUp">
+          <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="social-icon"
+            ><i class="fa fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social-icon"
+            ><i class="fa fa-brands fa-whatsapp"></i
+          ></a>
         </div>
         <div>
-          <button class="btn">More About Me</button>
+          <button class="btn glow-btn animate__animated animate__fadeInUp">
+            Resume
+          </button>
         </div>
       </div>
-      <div class="col-4 imgcss">
+      <div class="col-4 imgcss animate__animated animate__fadeInRight">
         <img
           class="userimg img-fluid"
           src="../../../assets/new_pic.jpg"
@@ -53,8 +59,17 @@
   </div>
 </section>
 <section class="Home" id="aboutSection">
-  <app-about-component></app-about-component>
+  <div class="home-content">
+    <app-about-component></app-about-component>
+  </div>
 </section>
 <section class="Home" id="skillSection">
-  <app-skill></app-skill>
+  <div class="home-content">
+    <app-skill></app-skill>
+  </div>
+</section>
+<section class="Home" id="contactme">
+  <div class="home-content">
+    <app-contact-me></app-contact-me>
+  </div>
 </section>

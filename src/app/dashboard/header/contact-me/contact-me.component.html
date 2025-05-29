@@ -1,0 +1,85 @@
+<div class="contact-container animate__animated animate__fadeIn">
+  <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+
+  <div class="contact-content">
+    <div class="contact-info animate__animated animate__fadeInLeft">
+      <h3>Let's Connect</h3>
+      <p>Feel free to reach out for collaborations or just a friendly hello</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>suriyakumar.dgmail.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Chennai, India</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-wrapper animate__animated animate__fadeInRight">
+      <form
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+        class="contact-form"
+      >
+        <div class="form-group">
+          <label>Name</label>
+          <input
+            type="text"
+            formControlName="name"
+            placeholder="Enter your name"
+            class="form-control"
+            [class.invalid]="isFieldInvalid('name')"
+          />
+          <div class="error-message" *ngIf="isFieldInvalid('name')">
+            Name is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input
+            type="email"
+            formControlName="email"
+            placeholder="Enter your email"
+            class="form-control"
+            [class.invalid]="isFieldInvalid('email')"
+          />
+          <div class="error-message" *ngIf="isFieldInvalid('email')">
+            Please enter a valid email address
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea
+            formControlName="message"
+            placeholder="Your message"
+            class="form-control"
+            rows="5"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="submit-btn"
+          [disabled]="contactForm.invalid || isSubmitting"
+        >
+          <span>{{ isSubmitting ? "Sending..." : "Send Message" }}</span>
+          <i class="fas fa-paper-plane" [class.spinning]="isSubmitting"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal" *ngIf="showSuccessModal">
+    <div class="modal-content animate__animated animate__zoomIn">
+      <i class="fas fa-check-circle success-icon"></i>
+      <h3>Thank You!</h3>
+      <p>Thanks for your message. I'll get back to you soon!</p>
+      <button class="close-btn" (click)="closeModal()">Close</button>
+    </div>
+  </div>
+</div>

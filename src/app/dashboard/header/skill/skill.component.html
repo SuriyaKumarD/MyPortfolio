@@ -1,180 +1,51 @@
-<h2 class="label">My <b>Skills</b></h2>
-<div class="card">
-  <div class="card-body">
-    <div class="row">
-      <div class="col-6">
-        <h3 class="label">Technical <b>Skills</b></h3>
-        <section class="mt-40">
-          <div class="classtechskills">
-            <i class="fa fa-brands fa-html5" style="color: #dfdde4">HTML</i>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Animated striped example"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              aria-label=" example"
-            >
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                style="width: 85%"
-              ></div>
-            </div>
-          </div>
-          <div class="classtechskills">
-            <i class="fa fa-brands fa-css3-alt" style="color: #ebebeb">CSS</i>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Animated striped example"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                style="width: 75%"
-              ></div>
-            </div>
-          </div>
-          <div class="classtechskills">
-            <i class="fa fa-brands fa-css3-alt" style="color: #ebebeb"
-              >Angular</i
-            >
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Animated striped example"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                style="width: 75%"
-              ></div>
-            </div>
-          </div>
-          <div class="classtechskills">
-            <i class="fa fa-brands fa-css3-alt" style="color: #ebebeb">MySQL</i>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Animated striped example"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                style="width: 75%"
-              ></div>
-            </div>
-          </div>
-          <div class="classtechskills">
-            <i class="fa fa-brands fa-bootstrap fa-fade" style="color: #ebebeb"
-              >Bootstrap</i
-            >
+<div class="skills-container">
+  <h2 class="section-title">
+    Technical <span class="highlight">Arsenal</span>
+  </h2>
 
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Animated striped example"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                style="width: 75%"
-              ></div>
-            </div>
+  <div class="skills-grid">
+    <!-- Frontend -->
+    <div class="skill-category animate__animated animate__fadeInUp">
+      <h3 class="category-title">Frontend Technologies</h3>
+      <div class="skills-box">
+        <div class="skill-item" *ngFor="let skill of frontendSkills">
+          <div class="skill-icon">
+            <i [class]="skill.icon"></i>
           </div>
-          <div class="classtechskills">
-            <i class="fa fa-brands fa-css3-alt" style="color: #ebebeb"
-              >Angular Material</i
-            >
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Animated striped example"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                style="width: 75%"
-              ></div>
-            </div>
-          </div>
-          <div class="classtechskills">
-            <i class="fa fa-brands fa-css3-alt" style="color: #ebebeb"
-              >GIT & GITHUB</i
-            >
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Animated striped example"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                style="width: 75%"
-              ></div>
-            </div>
-          </div>
-          <div class="classtechskills">
-            <i class="fa fa-brands fa-css3-alt" style="color: #ebebeb"
-              >Devops</i
-            >
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Animated striped example"
-              aria-valuenow="75"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
-              <div
-                class="progress-bar progress-bar-striped progress-bar-animated"
-                style="width: 75%"
-              ></div>
-            </div>
-          </div>
-        </section>
+          <span class="skill-name">{{ skill.name }}</span>
+        </div>
       </div>
-      <div class="col-6">
-        <h3 class="label">Professional <b>Skills</b></h3>
-        <section>
-          <div>
-            <div
-              class="pie animate"
-              style="--p: 90; --c: lightgreen; --b: 10px"
-            >
-              97%
-            </div>
-            <span style="display: block">Communication</span>
+    </div>
+
+    <!-- Backend -->
+    <div
+      class="skill-category animate__animated animate__fadeInUp"
+      style="animation-delay: 0.2s"
+    >
+      <h3 class="category-title">Backend & Database</h3>
+      <div class="skills-box">
+        <div class="skill-item" *ngFor="let skill of backendSkills">
+          <div class="skill-icon">
+            <i [class]="skill.icon"></i>
           </div>
-          <div>
-            <div class="pie animate" style="--p: 90; --c: Yellow; --b: 10px">
-              95%
-            </div>
-            <span style="display: block">Team Work</span>
+          <span class="skill-name">{{ skill.name }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools & Others -->
+    <div
+      class="skill-category animate__animated animate__fadeInUp"
+      style="animation-delay: 0.4s"
+    >
+      <h3 class="category-title">Tools & Platforms</h3>
+      <div class="skills-box">
+        <div class="skill-item" *ngFor="let skill of toolsSkills">
+          <div class="skill-icon">
+            <i [class]="skill.icon"></i>
           </div>
-          <div>
-            <div
-              class="pie animate"
-              style="--p: 90; --c: rgb(142, 216, 23); --b: 10px"
-            >
-              95%
-            </div>
-            <span style="display: block">Problem Solving</span>
-          </div>
-        </section>
+          <span class="skill-name">{{ skill.name }}</span>
+        </div>
       </div>
     </div>
   </div>

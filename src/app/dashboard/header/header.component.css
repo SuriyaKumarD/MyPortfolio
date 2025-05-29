@@ -1,68 +1,160 @@
-.desc h1 {
-  font-weight: 700;
+@import "animate.css";
+
+/* Navigation Styles */
+.navmenuheader {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  box-shadow: 0 2px 20px rgba(0, 255, 255, 0.1);
 }
-.userimg {
-  background: url("../../../assets/userimg.jpg") no-repeat;
-  background-position: center;
-  /* width: 90%;
-  height: 60%;
-  border-radius: 50%; */
-  width: 300px;
-  /* height: 300px; */
-  border-radius: 15%;
+
+.nav-link {
+  position: relative;
+  color: #fff;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
-.homeicons a {
-  margin: 10px;
-  font-size: 23px;
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: aqua;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hero Section Styles */
+.greeting {
+  color: #ccc;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 4em;
+  background: linear-gradient(45deg, #00fff2, #00a8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0;
+}
+
+.role {
+  font-size: 2em;
+  margin: 15px 0;
+}
+
+.typing {
   color: aqua;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: 2px solid aqua;
-  border-radius: 50%;
-  background: transparent;
-  text-decoration: none;
+  border-right: 3px solid aqua;
 }
-.homeicons a :hover {
-  color: white;
-  font-size: 23px;
-  border: 2px solid white;
-  text-decoration: none;
-  border-radius: 50%;
-  padding: 10px;
+
+.bio {
+  color: #ccc;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+/* Social Icons */
+.social-icon {
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.social-icon:hover::before {
+  left: 100%;
+}
+
+/* Glow Button */
+.glow-btn {
+  position: relative;
+  background: transparent;
+  border: 2px solid aqua;
+  color: aqua;
+  padding: 10px 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.glow-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.glow-btn:hover::before {
+  left: 100%;
+}
+
+/* Image Styles */
+.imgcss {
+  position: relative;
+}
+
+.userimg {
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.userimg:hover {
+  transform: scale(1.02);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .imgcss {
-  background: -webkit-linear-gradient(
-    left top,
-    rgb(220, 207, 20) 0%,
-    #f90 100%
-  );
-  width: 300px;
-  height: 300px;
-  border-radius: 15%;
-  padding: 10px;
-}
-.btn {
-  border: 2px solid aqua;
-  color: aqua;
-  width: 30%;
-  margin: 20px 0px 0px 0px;
-  border-radius: 5%;
-}
-
-.btn:hover {
-  border: 2px solid white;
-  color: white;
-}
-.typing {
-  color: aqua;
-  font-weight: 700;
-}
-.navmenuheader {
-  background-color: black;
-  opacity: 0.8;
-  height: 50px;
+  animation: float 3s ease-in-out infinite;
 }
