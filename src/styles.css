@@ -23,9 +23,6 @@ body {
   left: 0;
   width: 100%;
   background: inherit;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   z-index: 100;
 }
 

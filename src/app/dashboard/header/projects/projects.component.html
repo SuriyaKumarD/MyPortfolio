@@ -1,0 +1,63 @@
+<section class="projects-section">
+  <h2 class="section-title">
+    My Recent <span class="highlight">Projects</span>
+  </h2>
+
+  <div class="carousel-container">
+    <div class="carousel" #carousel>
+      <div
+        class="project-card animate__animated animate__fadeIn"
+        *ngFor="let project of projects"
+      >
+        <div class="card-image">
+          <img [src]="project.image" [alt]="project.name" />
+          <div class="tech-stack-overlay">
+            <span class="tech-badge" *ngFor="let tech of project.technologies">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <h3 class="project-title">{{ project.name }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+
+          <div class="project-links">
+            <a
+              [href]="project.liveLink"
+              target="_blank"
+              class="project-link live"
+            >
+              <i class="fa fa-globe"></i> Live Demo
+            </a>
+            <a
+              [href]="project.githubLink"
+              target="_blank"
+              class="project-link github"
+            >
+              <i class="fa fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="control-btn prev" (click)="previousSlide()">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      <button class="control-btn next" (click)="nextSlide()">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="carousel-indicators">
+      <span
+        *ngFor="let _ of projects; let i = index"
+        [class.active]="currentSlide === i"
+        (click)="goToSlide(i)"
+      >
+      </span>
+    </div>
+  </div>
+</section>

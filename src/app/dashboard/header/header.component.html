@@ -1,78 +1,147 @@
-<div class="navmenuheader">
-  <a href="#logo" class="logo animate__animated animate__fadeIn">Portfolio</a>
-  <div class="menu-icon" (click)="toggleMenu()">
-    <i class="fa fa-bars"></i>
-  </div>
-  <div class="nav-container" [class.active]="isMenuOpen">
-    <nav class="navbar">
-      <a href="#" (click)="closeMenu()">Home</a>
-      <a href="#aboutSection" (click)="closeMenu()">About</a>
-      <a href="#skillSection" (click)="closeMenu()">Skill</a>
-      <a href="#" (click)="closeMenu()">Projects</a>
-      <a href="#" (click)="closeMenu()">Contact</a>
+<header class="header">
+  <nav class="navbar-container">
+    <div class="logo-wrapper animate__animated animate__fadeInLeft">
+      <a href="#" class="logo">
+        <span class="logo-text">Port<span class="highlight">folio</span></span>
+      </a>
+    </div>
+
+    <button
+      class="mobile-nav-toggle"
+      (click)="toggleMenu()"
+      [class.active]="isMenuOpen"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" [class.active]="isMenuOpen">
+      <a
+        href="#home"
+        class="nav-link"
+        [class.active]="activeSection === 'home'"
+        (click)="closeMenu()"
+      >
+        <i class="fa fa-home"></i>
+        <span class="nav-text">Home</span>
+      </a>
+      <a
+        href="#about"
+        class="nav-link"
+        [class.active]="activeSection === 'about'"
+        (click)="closeMenu()"
+      >
+        <i class="fa fa-user"></i>
+        <span class="nav-text">About</span>
+      </a>
+      <a
+        href="#skillSection"
+        class="nav-link"
+        [class.active]="activeSection === 'skillSection'"
+        (click)="closeMenu()"
+      >
+        <i class="fa fa-code"></i>
+        <span class="nav-text">Skills</span>
+      </a>
+      <a
+        href="#projects"
+        class="nav-link"
+        [class.active]="activeSection === 'projects'"
+        (click)="closeMenu()"
+      >
+        <i class="fa fa-project-diagram"></i>
+        <span class="nav-text">Projects</span>
+      </a>
+      <a
+        href="#contact"
+        class="nav-link"
+        [class.active]="activeSection === 'contact'"
+        (click)="closeMenu()"
+      >
+        <i class="fa fa-envelope"></i>
+        <span class="nav-text">Contact</span>
+      </a>
     </nav>
-  </div>
-</div>
-<section class="Home">
-  <div class="home-content">
-    <div class="row w-100">
-      <div class="col-8 desc animate__animated animate__fadeInLeft">
+  </nav>
+</header>
+
+<!-- Rest of your content -->
+<section class="hero" id="home">
+  <div class="particles-background"></div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 hero-image animate__animated animate__fadeInRight">
+        <div class="image-wrapper">
+          <img
+            src="../../../assets/new_pic.jpg"
+            alt="Profile"
+            class="profile-img"
+          />
+          <div class="image-shape"></div>
+        </div>
+      </div>
+      <div class="col-lg-8 hero-content animate__animated animate__fadeInLeft">
         <h3 class="greeting">Hello, It's me</h3>
-        <h1 class="name">Suriya</h1>
+        <h1 class="name glitch" data-text="Suriya">Suriya</h1>
 
         <ngx-typed-js
-          [strings]="['Web Developer.', 'Angular Developer.', 'Photographer.']"
+          [strings]="roles"
           [typeSpeed]="100"
-          [backSpeed]="200"
-          [backDelay]="500"
+          [backSpeed]="50"
           [loop]="true"
         >
           <h3 class="role">And I'm a <span class="typing"></span></h3>
         </ngx-typed-js>
 
         <p class="bio">
-          I'm a Senior Software Developer with extensive experience for over 3
-          years, specialized in creating and developing responsive web
-          applications using Angular, Bootstrap, CSS, Angular Material, ReactJS,
-          TailwindCSS.
+          Senior Software Developer with 3+ years of experience in creating
+          responsive web applications
         </p>
-        <div class="homeicons animate__animated animate__fadeInUp">
-          <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="social-icon"
-            ><i class="fa fa-brands fa-instagram"></i
-          ></a>
-          <a href="#" class="social-icon"
-            ><i class="fa fa-brands fa-whatsapp"></i
-          ></a>
+
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/suriyakumard24"
+            class="social-icon"
+            data-tooltip="LinkedIn"
+          >
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/SuriyaKumarD"
+            class="social-icon"
+            data-tooltip="GitHub"
+          >
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="#" class="social-icon" data-tooltip="Twitter">
+            <i class="fa fa-twitter"></i>
+          </a>
         </div>
-        <div>
-          <button class="btn glow-btn animate__animated animate__fadeInUp">
-            Resume
+
+        <div class="cta-group">
+          <button class="btn primary-btn">
+            <span>Download CV</span>
+            <i class="fa fa-download"></i>
+          </button>
+          <button class="btn secondary-btn" href="#contact">
+            <span>Contact Me</span>
+            <i class="fa fa-arrow-right"></i>
           </button>
         </div>
-      </div>
-      <div class="col-4 imgcss animate__animated animate__fadeInRight">
-        <img
-          class="userimg img-fluid"
-          src="../../../assets/new_pic.jpg"
-          alt="userphoto"
-        />
       </div>
     </div>
   </div>
 </section>
-<section class="Home" id="aboutSection">
-  <div class="home-content">
-    <app-about-component></app-about-component>
-  </div>
+<section id="about" class="about-section">
+  <app-about-component></app-about-component>
 </section>
-<section class="Home" id="skillSection">
-  <div class="home-content">
-    <app-skill></app-skill>
-  </div>
+<section id="skillSection" class="about-section">
+  <app-skill></app-skill>
 </section>
-<section class="Home" id="contactme">
-  <div class="home-content">
-    <app-contact-me></app-contact-me>
-  </div>
+<section id="projects" class="about-section">
+  <app-projects></app-projects>
+</section>
+<section id="contact" class="about-section">
+  <app-contact-me></app-contact-me>
 </section>

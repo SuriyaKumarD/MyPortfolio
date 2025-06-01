@@ -10,6 +10,7 @@ import { SkillComponent } from './dashboard/header/skill/skill.component';
 import { ContactMeComponent } from './dashboard/header/contact-me/contact-me.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectsComponent } from './dashboard/header/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponentComponent,
     SkillComponent,
     ContactMeComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
