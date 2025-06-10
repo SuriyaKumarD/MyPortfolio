@@ -20,10 +20,9 @@ export class SkillComponent implements OnInit {
   ];
 
   backendSkills = [
-    { name: 'Node.js', icon: 'devicon-nodejs-plain colored' },
+    { name: 'C#', icon: 'devicon-csharp-plain' },
     { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
-    { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' },
-    { name: 'Python', icon: 'devicon-python-plain colored' },
+    { name: '.NET Core', icon: 'devicon-dotnetcore-plain' },
   ];
 
   toolsSkills = [

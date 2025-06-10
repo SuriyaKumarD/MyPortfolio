@@ -27,32 +27,32 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   autoSlideInterval: any;
 
   projects: Project[] = [
-    {
-      name: 'Portfolio Website',
-      description:
-        'A modern portfolio website built with Angular, featuring smooth animations and responsive design.',
-      image: 'assets/projects/portfolio.jpg',
-      technologies: ['Angular', 'TypeScript', 'SCSS', 'Bootstrap'],
-      liveLink: 'https://yourportfolio.com',
-      githubLink: 'https://github.com/yourusername/portfolio',
-    },
-    {
-      name: 'E-Commerce Dashboard',
-      description:
-        'Admin dashboard for managing products, orders, and customers with real-time updates.',
-      image: 'assets/projects/dashboard.jpg',
-      technologies: ['Angular', 'NgRx', 'Material UI', 'Firebase'],
-      liveLink: 'https://dashboard-demo.com',
-      githubLink: 'https://github.com/yourusername/dashboard',
-    },
+    // {
+    //   name: 'Portfolio Website',
+    //   description:
+    //     'A modern portfolio website built with Angular, featuring smooth animations and responsive design.',
+    //   image: 'assets/projects/portfolio.jpg',
+    //   technologies: ['Angular', 'TypeScript', 'SCSS', 'Bootstrap'],
+    //   liveLink: 'https://yourportfolio.com',
+    //   githubLink: 'https://github.com/yourusername/portfolio',
+    // },
+    // {
+    //   name: 'E-Commerce Dashboard',
+    //   description:
+    //     'Admin dashboard for managing products, orders, and customers with real-time updates.',
+    //   image: 'assets/projects/dashboard.jpg',
+    //   technologies: ['Angular', 'NgRx', 'Material UI', 'Firebase'],
+    //   liveLink: 'https://dashboard-demo.com',
+    //   githubLink: 'https://github.com/yourusername/dashboard',
+    // },
     {
       name: 'Task Management App',
       description:
-        'A full-stack task management application with drag-and-drop functionality.',
-      image: 'assets/projects/taskapp.jpg',
-      technologies: ['Angular', 'Node.js', 'MongoDB', 'Express'],
-      liveLink: 'https://taskapp-demo.com',
-      githubLink: 'https://github.com/yourusername/taskapp',
+        'An intuitive and efficient task management system designed to streamline daily productivity. The app supports full CRUD functionality, allowing users to create, view, update, and delete tasks with ease.',
+      image: 'assets/Projects/task_management.png',
+      technologies: ['Angular', 'Bootstrap', 'Vercel'],
+      liveLink: 'https://to-do-app-suriya.vercel.app/',
+      githubLink: 'https://github.com/SuriyaKumarD/ToDoApp',
     },
   ];
 
