@@ -48,4 +48,11 @@ export class HeaderComponent implements OnInit {
     link.click();
     document.body.removeChild(link);
   }
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
