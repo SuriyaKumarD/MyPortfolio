@@ -218,6 +218,7 @@
   }
 
   .nav-links {
+    display: none;
     position: fixed;
     top: 70px;
     right: -100%;
@@ -232,10 +233,11 @@
 
   .nav-links.active {
     right: 0;
+    display: flex;
   }
 
   .hero-content {
-    padding-right: 0;
+    padding: 0;
     text-align: center;
   }
 

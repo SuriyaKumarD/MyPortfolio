@@ -36,15 +36,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     //   liveLink: 'https://yourportfolio.com',
     //   githubLink: 'https://github.com/yourusername/portfolio',
     // },
-    // {
-    //   name: 'E-Commerce Dashboard',
-    //   description:
-    //     'Admin dashboard for managing products, orders, and customers with real-time updates.',
-    //   image: 'assets/projects/dashboard.jpg',
-    //   technologies: ['Angular', 'NgRx', 'Material UI', 'Firebase'],
-    //   liveLink: 'https://dashboard-demo.com',
-    //   githubLink: 'https://github.com/yourusername/dashboard',
-    // },
+
     {
       name: 'Task Management App',
       description:
@@ -53,6 +45,21 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       technologies: ['Angular', 'Bootstrap', 'Vercel'],
       liveLink: 'https://to-do-app-suriya.vercel.app/',
       githubLink: 'https://github.com/SuriyaKumarD/ToDoApp',
+    },
+    {
+      name: 'Glowing JS Clock',
+      description:
+        'Fully responsive, real-time digital clock built using pure HTML, CSS, and JavaScript, deployed seamlessly via Vercel. The clock dynamically updates every second using JavaScript’s Date object and DOM manipulation, ensuring accurate time display. The glowing visual effect is achieved through advanced CSS styling, including box-shadow, keyframe animations, and gradient transitions, creating a vibrant and modern UI.',
+      image: 'assets/glowingClock.png',
+      technologies: [
+        'Html',
+        'CSS',
+        'JavaScript',
+        'Vercel',
+        'Responsive Design',
+      ],
+      liveLink: 'https://digitaljsclock.vercel.app/',
+      githubLink: 'https://github.com/SuriyaKumarD/Glowing_Digital_CLock',
     },
   ];
 
