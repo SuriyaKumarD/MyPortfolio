@@ -40,4 +40,12 @@ export class HeaderComponent implements OnInit {
   closeMenu() {
     this.isMenuOpen = false;
   }
+  downloadCV() {
+    const link = document.createElement('a');
+    link.href = '../../../assets/Projects/Files/SuriyaKumarD-resume.pdf';
+    link.download = 'SuriyaKumarD-resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 }
